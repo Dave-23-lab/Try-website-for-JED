@@ -1,0 +1,331 @@
+/* ------------------------- */
+/* RESET & BASE */
+/* ------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Arial', sans-serif;
+}
+
+body {
+  background-color: #00172D;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: white;
+}
+
+/* ------------------------- */
+/* NAVBAR */
+/* ------------------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #00172D;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.JED-logo {
+  color: #820000;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* NAV MENU (desktop) */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #FF0000;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.navbar ul li a:hover::after {
+  width: 100%;
+}
+
+/* SIDEBAR MENU (mobile) */
+@media (max-width: 768px) {
+  .navbar ul {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    transition: right 0.4s ease-in-out;
+  }
+
+  .navbar ul.active {
+    right: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* ------------------------- */
+/* BUTTONS */
+/* ------------------------- */
+.button,
+.butto,
+.buton {
+  
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.button {
+  background: linear-gradient(135deg, #6A040F, #D00000, #FF4D6D);
+  width: 150px;
+  height: 50px;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.button.secondary {
+  background: linear-gradient(135deg, #03045E, #023E8A);
+}
+
+.buton {
+  background: #03045E;
+  width: 150px;
+  height: 50px;
+  border: 1px solid blue;
+}
+
+.butto {
+  background: linear-gradient(135deg, #6A040F, #D00000, #FF4D6D);
+  width: 150px;
+  height: 50px;
+  margin-top: 15px;
+}
+
+/* ------------------------- */
+/* HERO / DESCRIPTION */
+/* ------------------------- */
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('https://images.pexels.com/photos/12662809/pexels-photo-12662809.jpeg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+}
+
+.description p {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.STACK {
+  color: #820000;
+}
+
+/* ------------------------- */
+/* ABOUT SECTION */
+/* ------------------------- */
+.ABOUT {
+  margin: 60px auto;
+  display: flex;
+  gap: 45px;
+  width: 80%;
+  flex-wrap: wrap;
+}
+
+#hero-about {
+  width: 450px;
+  height: 300px;
+  border: 4px solid blue;
+  border-radius: 10px;
+  background-image: url('https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.Text {
+  max-width: 600px;
+}
+
+.Text h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.Text p {
+  color: gray;
+  line-height: 1.5;
+}
+
+/* ------------------------- */
+/* SERVICES */
+/* ------------------------- */
+.services {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.services h1 {
+  color: white;
+  margin-bottom: 25px;
+}
+
+.SERVICES {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+}
+
+.card {
+  border: 2px solid blue;
+  border-radius: 10px;
+  padding: 2em;
+  color: #D3D3D3;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('https://media.istockphoto.com/id/1452523977/photo/printing-press-with-blurred-belt-during-printing-process.jpg?s=612x612&w=0&k=20&c=4JW1h3CNtBD8JGmtChq2jDpsXBqkppEojxTpBmPWdxk=');
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 10px 2px blue;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  border: 4px solid red;
+  margin: 15px auto;
+}
+
+/* ------------------------- */
+/* PLANS */
+/* ------------------------- */
+.PLANS {
+  margin-top: 60px;
+  padding: 20px;
+}
+
+.PLANS h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: white;
+}
+
+.PLANS .plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.carp {
+  border: 4px solid blue;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #00172D, #0A1E63, #B71C1C, #8B0000);
+  background-size: 400% 400%;
+  animation: deepGradient 8s ease infinite;
+  color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carp:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+}
+
+/* ------------------------- */
+/* FOOTER */
+/* ------------------------- */
+footer {
+  background: #6727DC;
+  color: white;
+  padding: 2em;
+  text-align: center;
+  border-top: 1px dashed blue;
+  margin-top: auto;
+  font-size: 14px;
+}
+
+/* ------------------------- */
+/* ANIMATIONS */
+/* ------------------------- */
+@keyframes deepGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+
+
+
+
+

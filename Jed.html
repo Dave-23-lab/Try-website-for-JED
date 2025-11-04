@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JED Multiservies</title>
+      <link rel="stylesheet" type="text/css" href="chatjed.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    </head>
+  <body>
+    <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      
+      <span class="JED-logo">JED logo</span>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+     <ul id="menu">
+      <span class="close-btn">&times;</span>
+      <li><a href="#home" >HOME</a></li>
+      <li><a href="#about" >ABOUT US</a></li>
+      <li><a href="#portfolio">WORKS</a></li>
+      <li><a href="#services">LES PLANS</a></li>
+      <li><button class="button">CONTACT</button></li>
+    </ul>
+    </nav>
+    <section class="description">
+      <div>
+        <p class="text"><span class="STACK"> TRANSFORMER </span><span>  SES PENSEES EN REALITE</span></p>
+        
+        <button class="button">Previous Projects</button>
+      </div>
+    </section>
+    <section class="ABOUT">
+      <div id="hero-about"></div>
+      <div class=" Text">
+        <h3 >ABOUT US  </h3>
+      <p > Commence par des projets simples comme une page de présentation personnelle, un menu de restaurant ou un blog, afin de bien comprendre la structure HTML </p>
+        
+      <button class="button">HIRE ME
+        <img src=""></button>
+      <button class= "buton">RESUME</button> 
+      </div>
+    </section>
+    <section class=" SERVICES">
+      <h1 class="services">SERVICES</h1>
+      <div class="SERVICES">
+      <div class="card" id="1"><h3><div></div>GRAFIC DESIGN</h3>
+           <p> Commence par des projets simples comme une page de présentation personnelle, un menu de restaurant ou un blog, afin de bien comprendre la structure HTML</p>
+           <img src="imagegaphic.png" alt="Logo1" class="1">
+            <button class= "butto"> Voir plus </button>
+      </div>
+      <div class="card"><h3><div></div> WEB DESIGN</h3>
+           <p> Commence par des projets simples comme une page de présentation personnelle, un menu de restaurant ou un blog, afin de bien comprendre la structure HTML</p>
+           <img src="image mockup 1.png" alt="Logo1" class="1">
+            <button class= "butto"> Voir plus </button>
+      </div>
+      <div class="card"><h3><div></div> IMPRESSION</h3  id="photo">
+           <p> Commence par des projets simples comme une page de présentation personnelle, un menu de restaurant ou un blog, afin de bien comprendre la structure HTML</p>
+      </div>
+      <div class="card"><h3><div></div> </h3>
+           <p> Commence par des projets simples comme une page de présentation personnelle, un menu de restaurant ou un blog, afin de bien comprendre la structure HTML</p>
+      </div>
+      <section class="PLANS">
+      <h1>LES PLANS</h1>
+      <div class="plans">
+      <div class="carp"><h3><div></div> VIDEO EDITING</h3>
+           <p> Commence par des projets simples comme une page de présentation personnelle, un menu de restaurant ou un blog, afin de bien comprendre la structure HTML</p>
+      </div>
+      <div class="carp"><h3><div></div> VIDEO EDITING</h3>
+           <p> Commence par des projets simples comme une page de présentation personnelle, un menu de restaurant ou un blog, afin de bien comprendre la structure HTML</p>
+      </div>
+      <div class="carp"><h3><div></div> VIDEO EDITING</h3>
+           <p> Commence par des projets simples comme une page de présentation personnelle, un menu de restaurant ou un blog, afin de bien comprendre la structure HTML</p>
+      </div>
+    <!-- ✅ Script pour le menu -->
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('active'); // Ajoute ou retire la classe "active"
+      }
+    const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.getElementById('menu');
+const closeBtn = document.querySelector('.close-btn');
+
+// Ouvrir le menu
+menuToggle.addEventListener('click', (e) => {
+  e.stopPropagation(); // empêche de déclencher le clic global
+  navMenu.classList.add('active');
+});
+
+// Fermer avec la croix
+closeBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  navMenu.classList.remove('active');
+});
+
+// Fermer si on clique à l'extérieur
+document.addEventListener('click', (e) => {
+  if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+    navMenu.classList.remove('active');
+  }
+});
+</script>
+  </body>
+</html>
+    
